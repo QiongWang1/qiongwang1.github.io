@@ -50,7 +50,7 @@
                 </p>
                 <p style="text-align:center">
                   <a href="mailto:qiongw@bu.edu">Email</a> &nbsp;/&nbsp;
-                  <a href="q_data/QiongWang_CV_Aug19_2025.pdf">CV</a> &nbsp;/&nbsp;
+                  <a href="q_data/QiongWang_CV_Aug20_2025.pdf">CV</a> &nbsp;/&nbsp;
                   <!-- <a href="https://scholar.google.com">Scholar</a> &nbsp;/&nbsp; -->
                   <a href="https://github.com/QiongWang1">Github</a>
                 </p>
@@ -471,16 +471,16 @@
 
         <!-- 1-->
         <div style="margin-bottom:4px;">
-          <span class="papertitle">NLP and Gen AI Modeling with Sentence Transformer and Mistral-7B</span>
+          <span class="papertitle">Transformer-based Retrieval and Generation for QA with DistilBERT Encoder and Mistral-7B Decoder</span>
         </div>
         <!-- 3 -->
         <div style="margin-bottom:4px; color:gray;">
           <ul style="margin:0; padding-left:20px;">
-            <li>Developed a two-stage QA system consisting of a dense retriever model and a Mistral-7B based generator model. 
-              Fine-tuned the retriever using Sentence Transformer (distilbert-base-uncased) with a custom AutoModel + Pooling architecture, 
-              optimized via Multiple Negatives Ranking Loss on sentence-pair similarity tasks. Built a custom Data Loader using the Input Example for efficient training. 
-              Fine-tuned the generator using Mistral-7B to produce coherent answers from retrieved passages. 
-              Achieved a final evaluation score of 0.38, measured by the average of retriever precision, recall, and generator BLEU score.</li>
+            <li>Developed a Transformer-based question answering system with retrieval augmentation. </li>
+                <li>The retriever was implemented using SentenceTransformer (DistilBERT, an encoder-only Transformer) with a pooling layer to derive sentence-level embeddings for semantic similarity search, with passages pre-encoded and ranked via cosine similarity. 
+                  </li>
+                <li>For answer generation, a decoder-only Transformer (Mistral-7B) was adapted with LoRA fine-tuning on domain-specific data, enabling efficient and context-grounded response generation. The system was evaluated with IR metrics (precision, recall, MRR) and BLEU score, achieving a final composite score of 0.38.
+            </li>
           </ul>
         </div>
 
